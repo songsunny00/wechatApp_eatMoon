@@ -1,0 +1,31 @@
+<!--logs.wxml-->
+
+<view class="header">
+<image src="../../static/img/share_bg.png"></image>
+</view>
+
+<view class="wrap">
+<p class="content">
+活动期间10月1日至7日，每邀请一位好友助力，分数加50。
+活动结束后，排行榜前10名将获得惊喜大礼包哦。
+</p>
+<view class="hr">邀请好友记录</view>
+<view class="suportors">
+<ul>
+<view wx:if="{{suportors}}">
+<view wx:for="{{suportors}}" wx:for-index="idx" wx:for-item="item">
+<li><image src="{{item.avatarUrl}}"></image></li>
+</view>
+</view>
+</ul>
+<p class="tip">共<span>{{suportorNum}}</span>好友</p>
+</view>
+<view class="btn_share">
+<view wx:if="{{isSuportor}}">
+<view class="btn1 {{hasSuport}}" catchtap="fighting">为TA助力</view>
+<view class="btn1" catchtap="goGame" hidden="{{hasSuport? flase:true}}">我要参加</view></view>
+<view wx:else><span class="btn1" catchtap="share">邀好友助力</span></view>
+</view>
+</view>
+<!--提示分享-->
+<view class="weixin-share" hidden="{{isShare}}"></view>

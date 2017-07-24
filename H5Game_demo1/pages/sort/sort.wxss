@@ -1,0 +1,63 @@
+@import "../../static/css/weui.wxss";
+page{ background: linear-gradient(#def5fd , #c3edfc );}
+.align-center{text-align: center;}
+.font_green{color:rgb(90, 183, 41); }
+.font_bold{font-weight: bold;}
+.header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.header image{
+  width:100%;
+  height: 1200rpx;
+}
+.header .tit{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  opacity: 0;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: -40px;
+  background: -webkit-linear-gradient(#eee, #0ae);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.wrap{
+  position:relative;
+  font-size:14px;
+  color: #666;
+  background: #FFF;
+  opacity: 0.88;
+  margin: -45px 15px 0 15px;
+  padding: 10px;
+  min-height: 320px;
+  border-radius: 5px;
+}
+.weui-flex.my{background: #f9f6ed;}
+.weui-flex__item.item2{-webkit-box-flex:2;-webkit-flex:2;flex: 2;}
+.weui-flex__item{padding: 5px 0;vertical-align: middle;}
+.weui-flex__item image{width: 25px;height: 25px;border-radius: 50%;vertical-align: middle;}
+.weui-flex__item span{vertical-align: middle;padding-left: 4px;}
+.btn_share{position: absolute;bottom: 10px;text-align: center;width: 100%;left: 0;}
+.btn1, .btn2{
+	display: inline-block;
+	width: 196px;
+	height: 44px;
+	line-height: 44px;
+	color: #FFF;
+	font-size: 18px;
+	border-radius: 5px;
+	text-align: center;
+  margin: auto;
+}
+.btn1{
+	margin-top: 22px;
+	background-color: #0ae;
+}
+.btn2{
+	margin-top: 12px;
+	border: 1px solid #6A6B6D;
+}
+

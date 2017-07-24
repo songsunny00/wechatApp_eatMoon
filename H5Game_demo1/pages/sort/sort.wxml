@@ -1,0 +1,43 @@
+<!--排行榜.wxml-->
+
+<view class="header">
+<image src="../../static/img/sort_bg.png" animation="{{animationData}}"></image>
+<view class="tit" animation="{{animationTitle}}">排行榜</view>
+</view>
+
+<view class="wrap">
+<view class="weui-flex">
+    <view class="weui-flex__item align-center">排名</view>
+    <view class="weui-flex__item item2 align-center">用户</view>
+    <view class="weui-flex__item align-center">总分</view>
+    <view class="weui-flex__item align-center">邀请数</view>
+</view>
+<!--我自己的排名信息-->
+<view class="weui-flex my">
+    <view class="weui-flex__item align-center">{{mySortInfo.rowNo}}</view>
+    <view class="weui-flex__item item2 ">
+    <image src="{{mySortInfo.avatarUrl}}"></image>
+    <span style="vertical-align:middle;">{{mySortInfo.nickName}}</span>
+    </view>
+    <view class="weui-flex__item align-center font_green font_bold">{{mySortInfo.score}}</view>
+    <view class="weui-flex__item align-center font_bold">{{mySortInfo.suportor}}</view>
+</view>
+<!--前50名排名-->
+<view wx:for="{{users}}">
+
+<view class="weui-flex">
+    <view class="weui-flex__item align-center">{{index+1}}</view>
+    <view class="weui-flex__item item2 ">
+    <image src="{{item.avatarUrl}}"></image>
+    <span style="vertical-align:middle;">{{item.nickName}}</span>
+    </view>
+    <view class="weui-flex__item align-center font_green font_bold">{{item.score}}</view>
+    <view class="weui-flex__item align-center font_bold">{{item.suportor}}</view>
+</view>
+</view>
+<view class="btn_share">
+<span class="btn1" catchtap="backToGame">返回游戏</span>
+</view>
+</view>
+<!--提示分享-->
+<view class="weixin-share" hidden="{{isShare}}"></view>

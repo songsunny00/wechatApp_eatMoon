@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index2/index2",
+    "pages/sort/sort",
+    "pages/logs/logs",
+    "pages/index/index"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "疯狂吃月饼吧",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  }
+}

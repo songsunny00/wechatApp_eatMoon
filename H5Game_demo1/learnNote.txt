@@ -1,0 +1,11 @@
+微信小程序开发笔记
+
+1）用<view>替代<div>,否则设置id属性渲染不成功
+
+2）background-image：可以使用网络图片，或者 base64，或者使用<image/>标签，本地资源无法通过 WXSS 获取
+
+3）map、canvas、video、textarea 是由客户端创建的原生组件，原生组件的层级是最高的，所以页面中的其他组件无论设置 z-index 为多少，都无法盖在原生组件上。 原生组件暂时还无法放在 scroll-view 上，也无法对原生组件设置 css 动画。
+
+4）zepto/jquery 无法使用，zepto/jquery 会使用到window对象和document对象，所以无法使用。
+
+5)view 标签hideen属性才生效,否则渲染不成功

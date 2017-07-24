@@ -1,0 +1,37 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+<!--index2.wxml-->
+<view id="container">
+<!--开始游戏引导-->
+	<view id="guidePanel" style="display:{{guidePanelHide}};" catchtouchstart="startGame"></view>
+  <!--游戏画板无缝滚动背景-->
+	<view id="gameBg">
+  <image src="../../static/img/bg2.jpg" id="img1" style="top:{{gameBgImgTop1}}px"></image>
+  <image src="../../static/img/bg2.jpg" id="img2" style="top:{{gameBgImgTop2}}px"></image>
+  </view>
+<!--游戏画板-->
+	<view id="gamepanel" style="width:{{w}}px;height:{{h}}px" hidden="{{gamepanelShow}}">
+		<view class="score-wrap">
+      <image src="../../static/img/scorebg.png" class="scorebg"></image>
+      <image class="heart" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <span id="score">{{score}}</span>
+    </view>
+		<canvas disable-scroll="true" canvas-id="stage" style='width:{{w}}px; height:{{h}}px;' bindtouchstart="bindtouchstart" bindtouchmove="bindtouchmove" bindtouchend="bindtouchend" bindtouchcancel="bindtouchcancel">
+    </canvas>
+	</view>
+<!--游戏结束-->
+	<view id="gameoverPanel" hidden="{{isGameoverPanel}}"></view>
+  <view class="resultPanelBg" hidden="{{isResultPanel}}"><image src="../../static/img/endpage.png"></image></view>
+	<view id="resultPanel" hidden="{{isResultPanel}}">
+        <view class="weixin-share" hidden="{{isShare}}"></view>
+        <a href="javascript:void(0)" class="replay" catchtap="replay"></a>
+        <view id="scoreLevel">{{scoreLevel}}</view>
+        <view id="scorecontent">
+          <template is="wxParse" data="{{wxParseData:scorecontent.nodes}}"/>
+        </view>
+        <view class="scoreResult">
+          <view wx:if="{{score==0}}"><span class="btn1" catchtap="replay">大侠请重新来过</span></view>
+          <view wx:else><span class="btn1" catchtap="share">请小伙伴吃月饼</span></view>
+          <span class="btn1" catchtap="sort">查看排行榜</span>
+        </view>
+	</view>
+</view>
