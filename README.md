@@ -5,6 +5,5 @@
 > H5Game_demo1 里面放置微信小程序源代码 </br>
 > server 里面放置后台代码`nodejs+Mysql`  
 > [文字链接](https://github.com/sindresorhus/gulp-autoprefixer '悬停显示') </br>
-[![baidu]](http://baidu.com)  
-[baidu]:http://www.baidu.com/img/bdlogo.gif "百度Logo"  
+[![](https://img.shields.io/badge/download-1K-brightgreen.svg)](https://www.baidu.com)
 
