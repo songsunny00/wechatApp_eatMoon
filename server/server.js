@@ -34,40 +34,6 @@ app.use(function(req,res,next){
     res.locals = req.session;
     next();
 });
-// 小程序参数
-var APP_ID = 'wx30e833b56eb26ac7';
-var APP_SECRET = 'def314031841125434013eadaed2a2ea';
-// 公众号参数
-var APP_ID2 = 'wx468c55ab889a90b1';
-var APP_SECRET2 = '6831292acb8bfeae528ede859a091022';
-// 获取解密SessionKey
-var getSessionKey = function(code, callback){
-    var url = 'https://api.weixin.qq.com/sns/jscode2session?appid='
-	+APP_ID+'&secret='+APP_SECRET+'&js_code='+code
-	+'&grant_type=authorization_code';
-	//{"session_key":"rc\/mlEyIFKhKZg4CmTayEw==","expires_in":7200,"openid":"o4uvs0Kt-69Kw5G2El07kvr7JOto"}
-	var url2 = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='+APP_ID2+'&secret='+APP_SECRET2;
-	//{"access_token":""}
-	//获取用户信息and uninId
-	var url3='https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID&lang=zh_CN'
-	https.get(url, function(res){
-		var datas = [];  
-        var size = 0;  
-        res.on('data', function (data) {  
-            datas.push(data);  
-            size += data.length;  
-        });  
-        res.on("end", function () {  
-            var buff = Buffer.concat(datas, size);  
-            //var result = iconv.decode(buff, "utf8");//转码
-            var result = buff.toString();//不需要转编码,直接tostring  
-            
-        });  
-	}).on("error", function (err) {  
-        Logger.error(err.stack)  
-        callback.apply(null);  
-    });
-}
 
 //开发环境打印
 var morgan = require('morgan');
