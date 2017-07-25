@@ -11,7 +11,4 @@
 ![](https://raw.githubusercontent.com/songsunny00/wechatApp_eatMoon/master/READMEImg/pic4.png)
 ![](https://raw.githubusercontent.com/songsunny00/wechatApp_eatMoon/master/READMEImg/pic5.png)  
 
-```javascript
-document.getElementById("test").innerHTML="WELCOME";//javascript
-```
 
