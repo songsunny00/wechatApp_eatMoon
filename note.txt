@@ -1,2 +1,29 @@
-learn
-df
+对于MySQL数据库：
+//创建wechat数据库
+create database wechat;
+
+//创建user、suportor表
+CREATE TABLE `user` (
+  `id` varchar(100) NOT NULL,
+  `unionId` varchar(100) NOT NULL,
+  `nickName` varchar(100) NOT NULL,
+  `avatarUrl` varchar(300) NOT NULL,
+  `score` int(100) NOT NULL DEFAULT 0,
+  `suportor` int(100) NOT NULL DEFAULT 0,
+  `createAt` varchar(20) DEFAULT NULL,
+  `updateAt` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB CHARSET=utf8;
+
+CREATE TABLE `suportor` (
+  `idx` int auto_increment,
+  `id` varchar(100) NOT NULL,
+  `uId` varchar(100) NOT NULL,
+  `unionId` varchar(100) NOT NULL,
+  `nickName` varchar(100) NOT NULL,
+  `avatarUrl` varchar(300) NOT NULL,
+  `createAt` varchar(20) DEFAULT '',
+  PRIMARY KEY (`idx`),
+  KEY `uId` (`uId`),
+  CONSTRAINT `suportor_ibfk_1` FOREIGN KEY (`uId`) REFERENCES `user` (`id`)
+) ENGINE=InnoDB CHARSET=utf8;
