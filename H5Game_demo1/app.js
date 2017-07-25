@@ -21,7 +21,7 @@ App({
         success: function (res1) {
           console.log(res1);
           wx.request({
-            url: 'https://websong.club/user/getWechatUser.action', //仅为示例，并非真实的接口地址
+            url: 'https://websong.club/user/getWechatUser.action',
             data: {
               code: res1.code
             },

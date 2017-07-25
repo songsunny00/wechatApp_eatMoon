@@ -5,7 +5,7 @@ var app = getApp()
 Page({
   data: {
     w: app.w,
-    h: 508,
+    h: app.panelH,
     gamepanelShow:true,
     gameBgImgTop1:0,
     gameBgImgTop2:0,
@@ -277,7 +277,7 @@ function Ship(ctx) {
 }
 var gameMonitor = {
   time: 0,
-  score: 0,
+  //score: 0,
   foodList: [],
   timmer:null,
   //游戏分数等级设置
