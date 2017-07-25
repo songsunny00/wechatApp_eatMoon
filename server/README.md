@@ -4,6 +4,9 @@
 >1、[nodejs基本知识点](https://www.runoob.com/nodejs/nodejs-tutorial.html) </br>
 >2、[mysql基本增删改](https://www.runoob.com/mysql/mysql-tutorial.html)</br>
 
+## 基本结构
+![](https://raw.githubusercontent.com/songsunny00/wechatApp_eatMoon/master/READMEImg/pic6.png)  
+
 
 
 	
